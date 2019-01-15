@@ -35,13 +35,13 @@ var time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3
 
 var pikeplaceUl = document.getElementById('pikeplaceUl');
 
-var seatacUl = document.getElementById('SeaTac');
+var seatacUl = document.getElementById('seatacUl');
 
-var seacenterUl = document.getElementById('SeaCenter');
+var seacenterUl = document.getElementById('seaCenterUl');
 
-var caphillUl = document.getElementById('CapHill');
+var caphillUl = document.getElementById('capHillUl');
 
-var alkiUl = document.getElementById('Alki');
+var alkiUl = document.getElementById('AlkiUl');
 
 function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
@@ -55,6 +55,7 @@ var pikeUl = {
     avgcookieSales: 6.3,
     
     render: function() {
+        var cookiesTot = 0;
     for (var i = 0; i < time.length; i++) {
 
         var liEl = document.createElement('li');
@@ -66,32 +67,43 @@ var pikeUl = {
         liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
         
+        cookiesTot = cookiesTot + avgCust;
         pikeplaceUl.appendChild(liEl);
         }
+        var liOl = document.createElement('li');
+        liOl.textContent = `Total: ${cookiesTot} cookies`;
+        pikeplaceUl.appendChild(liOl);
     }
 }
 pikeUl.render();
 
 
-var seatacUl = {
+var seaTacUl = {
     location: 'SeaTac',
     minCusomters: 3,
     maxCustomers: 24,
     avgcookieSales: 1.2,
 
     render: function() {
+        var cookiesTot = 0;
     for (var i = 0; i < time.length; i++) {
-
+        
         var liEl = document.createElement('li');
             console.log('just created liEl', liEl);
+    
+        var avgCust = getRandomInt(this.minCusomters, this.maxCustomers);
+        var avgCust = Math.floor (avgCust * this.avgcookieSales);
 
-        liEl.textContent = `${time[i]}: ${this.avgcookieSales[i]}cookies`
+        liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
-        
+    
+       
         seatacUl.appendChild(liEl);
         }
     }
 }
+seaTacUl.render();
+
 
 var seacenterUl = {
     location: 'SeaCenter',
@@ -100,18 +112,25 @@ var seacenterUl = {
     avgcookieSales: 3.7,
 
     render: function() {
+        var cookiesTot = 0;
     for (var i = 0; i < time.length; i++) {
-
+        
         var liEl = document.createElement('li');
             console.log('just created liEl', liEl);
+    
+        var avgCust = getRandomInt(this.minCusomters, this.maxCustomers);
+        var avgCust = Math.floor (avgCust * this.avgcookieSales);
 
-        liEl.textContent = `${time[i]}: ${this.avgcookieSales[i]}cookies`
+        liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
-        
-        seacenterUl.appendChild(liEl);
+    
+   
+        seaCenterUl.appendChild(liEl);
         }
     }
 }
+seacenterUl.render();
+
 
 var caphillUl = {
     location: 'CapHill',
@@ -120,18 +139,24 @@ var caphillUl = {
     avgcookieSales: 2.3,
 
     render: function() {
+        var cookiesTot = 0;
     for (var i = 0; i < time.length; i++) {
 
         var liEl = document.createElement('li');
             console.log('just created liEl', liEl);
+        
+        var avgCust = getRandomInt(this.minCusomters, this.maxCustomers);
+        var avgCust = Math.floor (avgCust * this.avgcookieSales);
 
-        liEl.textContent = `${time[i]}: ${this.avgcookieSales[i]}cookies`
+        liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
         
-        caphillUl.appendChild(liEl);
+        
+        capHillUl.appendChild(liEl);
         }
     }
 }
+caphillUl.render();
 
 var alkiUl = {
     location: 'Alki',
@@ -140,15 +165,23 @@ var alkiUl = {
     avgcookieSales: 4.6,
 
     render: function() {
+        var cookiesTot = 0;
     for (var i = 0; i < time.length; i++) {
 
         var liEl = document.createElement('li');
             console.log('just created liEl', liEl);
+    
+        var avgCust = getRandomInt(this.minCusomters, this.maxCustomers);
+        var avgCust = Math.floor (avgCust * this.avgcookieSales);
 
-        liEl.textContent = `${time[i]}: ${this.avgcookieSales[i]}cookies`
+        liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
+    
         
-        alkiUl.appendChild(liEl);
+        AlkiUl.appendChild(liEl);
         }
     }
 }
+alkiUl.render();
+
+
