@@ -97,9 +97,12 @@ var seaTacUl = {
         liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
     
-       
+        cookiesTot = cookiesTot + avgCust;
         seatacUl.appendChild(liEl);
         }
+        var liOl = document.createElement('li');
+        liOl.textContent = `Total: ${cookiesTot} cookies`;
+        seatacUl.appendChild(liOl);
     }
 }
 seaTacUl.render();
@@ -124,9 +127,12 @@ var seacenterUl = {
         liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
     
-   
+        cookiesTot = cookiesTot + avgCust;
         seaCenterUl.appendChild(liEl);
         }
+        var liOl = document.createElement('li');
+        liOl.textContent = `Total: ${cookiesTot} cookies`;
+        seaCenterUl.appendChild(liOl);
     }
 }
 seacenterUl.render();
@@ -151,9 +157,12 @@ var caphillUl = {
         liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
         
-        
+        cookiesTot = cookiesTot + avgCust;
         capHillUl.appendChild(liEl);
         }
+        var liOl = document.createElement('li');
+        liOl.textContent = `Total: ${cookiesTot} cookies`;
+        capHillUl.appendChild(liOl);
     }
 }
 caphillUl.render();
@@ -177,9 +186,12 @@ var alkiUl = {
         liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
     
-        
+        cookiesTot = cookiesTot + avgCust;
         AlkiUl.appendChild(liEl);
         }
+        var liOl = document.createElement('li');
+        liOl.textContent = `Total: ${cookiesTot} cookies`;
+        AlkiUl.appendChild(liOl);
     }
 }
 alkiUl.render();
