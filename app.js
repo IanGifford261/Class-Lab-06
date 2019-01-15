@@ -1,36 +1,5 @@
 'use strict';
 
-// var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-// var alkiUl = document.getElementById('');
-
-// var goldenUl = document.getElementById('');
-
-// var edmondsUl = document.getElementById('')
-
-// var alki = {
-//     name: 'Alki',
-//     neighborhood: 'West Seattle',
-//     seagullCount: [212, 44, 34, 11, 18, 88, 377],
-
-//      render: function() {
-//         for (var i = 0; i < days.length; i++){
-             
-                //1. Create element to hold the data
-
-//              var liEl = document.createElement('li');
-//              console.log('just created liEl', liEl);
-
-//             //2. Assign the data tothe element
-//             liEl.textContent = `${days[i]}: ${this.seagullCount[i]} seagulls`
-//             console.log('just assigned a value to liEl', liEl);
-
-//             //3. Put the element into the DOM
-//             alkiUl.appendChild(liEl);
-//         }
-//     }
-// }
-
 var time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var pikeplaceUl = document.getElementById('pikeplaceUl');
