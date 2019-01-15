@@ -33,7 +33,7 @@
 
 var time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-var pikeplaceUl = document.getElementById('PikePlace');
+var pikeplaceUl = document.getElementById('pikeplaceUl');
 
 var seatacUl = document.getElementById('SeaTac');
 
@@ -43,6 +43,9 @@ var caphillUl = document.getElementById('CapHill');
 
 var alkiUl = document.getElementById('Alki');
 
+function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
 
 
 var pikeUl = {
@@ -50,25 +53,25 @@ var pikeUl = {
     minCusomters: 23,
     maxCustomers: 65,
     avgcookieSales: 6.3,
-    customersPerHour: function getRandomInt (minCustomers, maxCustomers) {
-        min = Math.ceil(23);
-        max = Math.floor(65);
-        return Math.floor(Math.random() * (maxCustomers - minCustomers) + min);
-    },
     
     render: function() {
     for (var i = 0; i < time.length; i++) {
 
         var liEl = document.createElement('li');
             console.log('just created liEl', liEl);
+        
+        var avgCust = getRandomInt(this.minCusomters, this.maxCustomers);
+        var avgCust = Math.floor (avgCust * this.avgcookieSales);
 
-        liEl.textContent = `${time[i]}: ${this.avgcookieSales[i]}cookies`
+        liEl.textContent = `${time[i]}: ${avgCust}cookies`;
             console.log('just assigned a value to liEl', liEl);
         
-        pikeUl.appendChild(liEl);
+        pikeplaceUl.appendChild(liEl);
         }
     }
 }
+pikeUl.render();
+
 
 var seatacUl = {
     location: 'SeaTac',
