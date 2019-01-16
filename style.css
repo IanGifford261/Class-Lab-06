@@ -1,3 +1,16 @@
 body {
     background-color: salmon;
+    font-family: 'Trebuchet MS';
+    
+}
+
+img{
+    width: 200px;
+
+}
+
+h1{
+    color: skyblue;
+    font-family: Verdana;
+    font-style: italic;
 }
