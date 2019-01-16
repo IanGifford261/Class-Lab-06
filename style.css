@@ -6,11 +6,26 @@ body {
 
 img{
     width: 200px;
-
+    border: 5px double rgb(130, 133, 4);
+    padding: 5px 3px;
+    
 }
 
 h1{
     color: skyblue;
     font-family: Verdana;
     font-style: italic;
+}
+
+td{
+    border: 5px solid red;
+    padding: 5px;
+    margin: 5px;
+}
+  
+
+th{
+    border: 5px solid red;
+    padding: 5px;
+    margin: 5px;
 }
