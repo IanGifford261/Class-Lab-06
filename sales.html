@@ -5,7 +5,7 @@
         <head>
             <meta charset="utf-8">
             <link rel="stylesheet" href="reset.css">
-            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" type="text/css" href="style.css">
             <img src="https://raw.githubusercontent.com/codefellows/seattle-201d44/master/class-06-dom-objects-domain_modeling/assets/salmon.png" alt="Big Salmon Fishy">
                 
                 <title>Salmon Cookie Sales</title>
@@ -13,10 +13,31 @@
 
                     <body>
                         <h1>Salmon Cooky YumYum Sales</h1>
-                        <table id= 'Cookies' >
-                            <a href="index.html">Poke Me!</a>   
-                        </table>
-                    
+                            <table id= 'Cookies'></table><br><br>
+
+                            <form id="new-location">
+                                <fieldset>
+                                    <legend>Input a New Location!</legend>
+                                    
+                                    <label for="location">Location:</label>
+                                    <input type="text" size="15"/>
+                                    
+                                    <label for="minCusto">Min. Customers:</label>
+                                    <input type="number" size="15"/>
+                                
+                                    <label for="maxCusto">Max. Customers:</label>
+                                    <input type="number" size="15"/>
+
+                                    <label for="avgCooky">Average Cookies Sold:</label>
+                                    <input type="number" size="15"/>
+
+                                    <button id="boop">POKE IT FOR SALMONS</button>
+                                </fieldset>
+                            </form><br><br><br><br><br><br><br><br>
+                        
+                        
+                        
+                        <a href="index.html" id="switch">Poke Me!</a>
             <script src="app.js"></script>
         </body>
 
