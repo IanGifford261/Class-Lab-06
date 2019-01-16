@@ -32,9 +32,9 @@ new locationS('Alki', 2, 16, 4.6);
 locationS.prototype.cookieSales = function(){
     for(var i = 0; i < time.length; i++){
         function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
+        return Math.ceil(Math.random() * (max - min)) + min;
         }
-        this.salmons.push(Math.floor(getRandomInt(this.minCustomers, this.maxCustomers) * this.avgcookieSales));
+        this.salmons.push(Math.ceil(getRandomInt(this.minCustomers, this.maxCustomers) * this.avgcookieSales));
         cookiesTot = cookiesTot + this.salmons[i];
         hourlyTot[i] = hourlyTot[i] + this.salmons[i];
         this.salesTot = this.salesTot + this.salmons[i]
