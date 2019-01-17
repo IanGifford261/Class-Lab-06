@@ -6,6 +6,7 @@ var locationTable = document.getElementById('Cookies');
 var cookiesTot = 0;
 var hourlyTot = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+var formL = document.getElementById('new-location')
 
 function locationS(location, minCustomers, maxCustomers, avgcookieSales){
     this.location = location;
@@ -55,10 +56,12 @@ locationS.prototype.render = function() {
 
 makeHeaderRow();
 
+
 for(var i = 0; i < allPlaces.length; i++){
     allPlaces[i].cookieSales();
     allPlaces[i].render();
-}
+    }
+
 
 makeFooterRow();
 //console.table(allPlaces);
@@ -104,17 +107,24 @@ function makeFooterRow(){
 }
 
 function renderAllPlaces(){
+    //locationTable.textContent = '';
+
     for(var i = 0; i < allPlaces.length; i++)
         allPlaces[i].render();
 }
+   
 
-//adding the form to create new locations
-var newLocation = document.getElementById('location');
-var minCusto= document.getElementById('minCusto');
-var maxCusto= document.getElementById('maxCusto');
-var avgCooky= document.getElementById('avgCooky');
+//
+// function inputL(event){
+//     event.preventDefault();
+//     var location = event.target.location.value;
+//     var minCustomers = event.target.minCusto.value;
+//     var maxCustomers = event.target.maxCusto.value;
+//     var avgcookieSales = event.target.avgCooky.value;
+//     new locationS(location, minCustomers, maxCustomers, avgcookieSales);
+// renderAllPlaces();
 
-var inputL = function(location, tex){
-    this.newLocation = location;
-    
-}
+// }
+
+// formL.addEventListener('submit', inputL);
+
