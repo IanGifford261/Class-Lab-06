@@ -1,6 +1,42 @@
+head {
+    position: relative;
+}
+
+
+#title {
+    display: inline;
+    margin-left: 575px;
+    color: skyblue;
+    font-family: 'Yellowtail', cursive;
+    font-size: 65px;   
+
+}
+
 body {
     background-color: salmon;
     font-family: 'Trebuchet MS';
+    
+}
+
+main {
+    width: 960px;
+    margin-left: 30px;
+
+}
+main section p {
+    font-size: 19px;
+}
+#family{
+    width: 400px;
+    
+    margin-top: 15px;
+}
+
+#about{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    
     
 }
 
@@ -19,7 +55,18 @@ body {
     padding: 5px 3px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
 }
+
+#times {
+    margin-left: 25px;
+    font-size: 20px;
+    margin-top: 200px;
+
+}
+
+
+
 
 h1{
     color: skyblue;
@@ -51,7 +98,7 @@ th{
 }
 
 #booty{
-    position: absolute;
-    bottom: 0px
-
+    
+    bottom: 0px;
+    margin-top:  200px;
 }
