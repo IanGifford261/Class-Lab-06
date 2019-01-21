@@ -26,6 +26,9 @@ main {
 main section p {
     font-size: 19px;
 }
+#cutter{
+    
+}
 #family{
     width: 400px;
     
@@ -87,6 +90,14 @@ th{
     margin: 5px;
 }
 
+#merch button{
+    float: top;
+
+    font-family: monospace;
+    font-size: 45px;
+    color: rgb(16, 0, 238);
+}
+
 #switch{ font: fantasy;
         border: 2px solid greenyellow;
         background-color: blanchedalmond;
@@ -101,4 +112,9 @@ th{
     
     bottom: 0px;
     margin-top:  200px;
+}
+
+#chinook{
+    float: left;
+    background-color: salmon; 
 }
